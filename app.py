@@ -3,8 +3,6 @@ import os
 from flask import Flask, request, jsonify
 from keras.models import load_model
 import numpy as np
-from sklearn.cluster import KMeans
-from sklearn.preprocessing import StandardScaler
 app = Flask(__name__)
 
 # Load model
