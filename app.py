@@ -3,14 +3,11 @@ import os
 from flask import Flask, request, jsonify
 from keras.models import load_model
 import numpy as np
+
 app = Flask(__name__)
 
 # Load model
 model = load_model('model.h5')
-
-@app.route("/")
-def index():
-    return "Hello World!"
 
 @app.route('/predict', methods=['POST'])
 def predict():
