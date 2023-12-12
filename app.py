@@ -9,6 +9,10 @@ app = Flask(__name__)
 # Load model
 model = load_model('model.h5')
 
+@app.route("/")
+def index():
+    return "Hello World!"
+    
 @app.route('/predict', methods=['POST'])
 def predict():
     try:
