@@ -1,6 +1,7 @@
 import os
 
 from flask import Flask, request, jsonify
+# from tensorflow.keras.models import load_model
 from keras.models import load_model
 import numpy as np
 
@@ -12,7 +13,7 @@ model = load_model('model.h5')
 @app.route("/")
 def index():
     return "Hello World!"
-    
+
 @app.route('/predict', methods=['POST'])
 def predict():
     try:
